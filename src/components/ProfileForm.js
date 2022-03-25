@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 
 function ProfileForm({submit}) {
 const [profile, setProfile]=useState({
-firstname:"",
-lastname:"",
+firstName:"",
+lastName:"",
 phone:"",
     });
 
@@ -30,29 +30,37 @@ const handleForm =(e)=>{
 
  <label> 
 First name
-<input name='firstname' type="text" onChange={handler}/>
+<input name='firstName' value={profile.firstName} onChange={handler} type="text"/>
 </label>
 
  <label> 
 Last name 
-<input name='lastname' type="text" onChange={handler}/>
+<input name='lastName' value={profile.lastName} onChange={handler} type="text" />
 </label>
+</div>
 
+<div className='names'>
  <label> 
 Email
-<input name='email' type="email" onChange={handler}/>
+<input name='email' value={profile.email} onChange={handler} type="email" />
 </label>
 
  <label> 
 Phone
-<input name='phone' type="tel" onChange={handler}/>
+<input name='phone' value={profile.phone} onChange={handler} type="tel" />
 </label> 
+
+
+
 </div>
 </fieldset>
  <button className='form' onClick={handleForm}>Add Profile</button>   
 </form>
-    
+
+
 </div>
+
+
   )
 }
 

@@ -13,6 +13,7 @@ phone:"0554318132"
 ])
 const updateProfiles =(profile)=>{
 let arr =allProfiles;
+
 arr.push(profile);
 setALLProfiles([...arr]);
 };
